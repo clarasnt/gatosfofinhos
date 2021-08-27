@@ -8,6 +8,7 @@
         'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
         })(window,document,'script','dataLayer','GTM-KM69J45');</script>
         <!-- End Google Tag Manager -->
+        
         <meta charset="UTF-8">
         <title>Gatos Fofinhos</title>
     </head>
@@ -16,35 +17,66 @@
         <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KM69J45"
         height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <!-- End Google Tag Manager (noscript) -->
+
         <h1>Gatos Fofinhos</h1>
-        <p>Coleção de fotos de gatinhos fofinhos para você admirar e ficar feliz!</p>
+        <p>Coleção de fotos de gatinhos fofinhos para você admirar e ficar feliz, escolha o que você quer adotar!</p>
         <button onclick="alterarVermelho();">Vermelho</button>
         <button onclick="alterarAmarelo();">Amarelo</button>
         <br>
         <a href="https://pt.wikipedia.org/wiki/Gato#:~:text=O%20gato%20(Felis%20silvestris%20catus,p%C3%A1ssaros%2C%20lagartixas%20e%20alguns%20insetos.">Gatos em Wikipedia</a>
         <br>
         <script>
-            const corpo = document.querySelector('body');
+            let elem = document.getElementById('perc')
+            let doc = document.documentElement
+            const corpo = document.querySelector('body')
 
-            function alterarVermelho () {
-                corpo.style = 'background-color: red'
-                window.dataLayer.push({'event':'click', 'button':'Botão vermelho'});
-            }
+            window.addEventListener('scroll', function() {
+                let value = parseInt(100 * doc.scrollTop / (doc.scrollHeight - doc.clientHeight))
+                
+                if (value <= 12.5){
+                    corpo.style.backgroundColor = 'red'
+                    window.dataLayer.push({'event': 'scroll', 'porcentagem': '12,5 %'})
+                } else if (12.5 < value && value <= 25){
+                    corpo.style.backgroundColor = 'orange'
+                    window.dataLayer.push({'event': 'scroll', 'porcentagem': '25 %'})
+                } else if (25 < value && value  <= 37.5){
+                    corpo.style.backgroundColor = 'yellow'
+                    window.dataLayer.push({'event': 'scroll', 'porcentagem': '37,5 %'})
+                } else if (37.5 < value && value  <= 50){
+                    corpo.style.backgroundColor = 'green'
+                    window.dataLayer.push({'event': 'scroll', 'porcentagem': '50 %'})
+                } else if (50 < value && value  <= 62.5){
+                    corpo.style.backgroundColor = 'rgb(0, 238, 255)'
+                    window.dataLayer.push({'event': 'scroll', 'porcentagem': '62,5 %'})
+                } else if (62.5 < value && value  <= 75){
+                    corpo.style.backgroundColor = 'blue'
+                    window.dataLayer.push({'event': 'scroll', 'porcentagem': '75 %'})
+                } else if (75 < value && value  <= 87.5){
+                    corpo.style.backgroundColor = 'purple'
+                    window.dataLayer.push({'event': 'scroll', 'porcentagem': '87,5 %'})
+                } else if (87.5 < value && value  <= 100){
+                    corpo.style.backgroundColor = 'pink'
+                    window.dataLayer.push({'event': 'scroll', 'porcentagem': '100 %'})
+                }
 
-            function alterarAmarelo () {
-                corpo.style = 'background-color: yellow'
-                window.dataLayer.push({'event':'click', 'button':'Botão amarelo'});
-            }
+
+            })
+
         </script>
-        <img src="gato1.jpg" alt="Gato fofinho">
+        <a href="gato1.html"><img src="gato1.jpg" alt="Gato fofinho"></a>
+        <button>Adicionar ao carrinho</button>
         <br>
-        <img src="gato2.jpg" alt="Gato fofinho">
+        <a href=""><img src="gato2.jpg" alt="Gato fofinho"></a>
+        <button>Adicionar ao carrinho</button>
         <br>
-        <img src="gato3.jpg" alt="Gato fofinho">
+        <a href=""><img src="gato3.jpg" alt="Gato fofinho"></a>
+        <button>Adicionar ao carrinho</button>
         <br>
-        <img src="gato4.jpg" alt="Gato fofinho">
+        <a href=""><img src="gato4.jpg" alt="Gato fofinho"></a>
+        <button>Adicionar ao carrinho</button>
         <br>
-        <img src="gato5.jpg" alt="Gato fofinho">
+        <a href=""><img src="gato5.jpg" alt="Gato fofinho"></a>
+        <button>Adicionar ao carrinho</button>
         <br>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/LMD6MqwErzc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </body>
