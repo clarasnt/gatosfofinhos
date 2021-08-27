@@ -8,7 +8,6 @@
         'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
         })(window,document,'script','dataLayer','GTM-KM69J45');</script>
         <!-- End Google Tag Manager -->
-        
         <meta charset="UTF-8">
         <title>Gatos Fofinhos</title>
     </head>
@@ -17,7 +16,6 @@
         <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KM69J45"
         height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <!-- End Google Tag Manager (noscript) -->
-
         <h1>Gatos Fofinhos</h1>
         <p>Coleção de fotos de gatinhos fofinhos para você admirar e ficar feliz, escolha o que você quer adotar!</p>
         <button onclick="alterarVermelho();">Vermelho</button>
@@ -33,32 +31,45 @@
             window.addEventListener('scroll', function() {
                 let value = parseInt(100 * doc.scrollTop / (doc.scrollHeight - doc.clientHeight))
                 
-                if (value == 12.5){
+                if (value <= 12.5){
                     corpo.style.backgroundColor = 'red'
-                    window.dataLayer.push({'event': 'scroll', 'porcentagem': '12,5 %'})
-                } else if (value == 25){
+                } else if (value > 12 && value < 25){
                     corpo.style.backgroundColor = 'orange'
-                    window.dataLayer.push({'event': 'scroll', 'porcentagem': '25 %'})
-                } else if (value == 25){
+                } else if (value > 25 && value < 37.5){
                     corpo.style.backgroundColor = 'yellow'
-                    window.dataLayer.push({'event': 'scroll', 'porcentagem': '37,5 %'})
-                } else if (value == 37.5){
+                } else if (value > 37.5 && value < 50){
                     corpo.style.backgroundColor = 'green'
-                    window.dataLayer.push({'event': 'scroll', 'porcentagem': '50 %'})
-                } else if (value == 50){
-                    corpo.style.backgroundColor = 'rgb(0, 238, 255)'
-                    window.dataLayer.push({'event': 'scroll', 'porcentagem': '62,5 %'})
-                } else if (value == 62.5){
+                } else if (value > 50 && value < 62.5){
+                    corpo.style.backgroundColor = 'rgb(0, 255, 255)'
+                } else if (value > 62.5 && value < 75){
                     corpo.style.backgroundColor = 'blue'
-                    window.dataLayer.push({'event': 'scroll', 'porcentagem': '75 %'})
-                } else if (value == 75){
+                } else if (value > 75 && value < 87.5){
                     corpo.style.backgroundColor = 'purple'
-                    window.dataLayer.push({'event': 'scroll', 'porcentagem': '87,5 %'})
-                } else if (value == 87.5){
-                    corpo.style.backgroundColor = 'pink'
-                    window.dataLayer.push({'event': 'scroll', 'porcentagem': '100 %'})
+                } else if (value > 87.5 && value < 100){
+                    corpo.style.backgroundColor = 'rgb(225, 0, 255)'
                 }
 
+                if (value == 10){
+                    dataLayer.push({'event':'scroll','porcentagem': '10 %'})
+                } else if (value == 20){
+                    dataLayer.push({'event':'scroll','porcentagem': '20 %'})
+                } else if (value == 30){
+                    dataLayer.push({'event':'scroll','porcentagem': '30 %'})
+                } else if (value == 40){
+                    dataLayer.push({'event':'scroll','porcentagem': '40 %'})
+                } else if (value == 50){
+                    dataLayer.push({'event':'scroll','porcentagem': '50 %'})
+                } else if (value == 60){
+                    dataLayer.push({'event':'scroll','porcentagem': '60 %'})
+                } else if (value == 70){
+                    dataLayer.push({'event':'scroll','porcentagem': '70 %'})
+                } else if (value == 80){
+                    dataLayer.push({'event':'scroll','porcentagem': '80 %'})
+                } else if (value == 90){
+                    dataLayer.push({'event':'scroll','porcentagem': '90 %'})
+                } else if (value == 100){
+                    dataLayer.push({'event':'scroll','porcentagem': '100 %'})
+                } 
 
             })
 
