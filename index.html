@@ -30,6 +30,7 @@
 
             window.addEventListener('scroll', function() {
                 let value = parseInt(100 * doc.scrollTop / (doc.scrollHeight - doc.clientHeight))
+                let porcentagem = [-1]
                 
                 if (value <= 12.5){
                     corpo.style.backgroundColor = 'red'
@@ -48,34 +49,12 @@
                 } else if (value > 87.5 && value < 100){
                     corpo.style.backgroundColor = 'rgb(225, 0, 255)'
                 }
-
-                if (value == 10){
-                    dataLayer.push({'event':'scroll','porcentagem': '10 %'})
-                } else if (value == 20){
-                    dataLayer.push({'event':'scroll','porcentagem': '20 %'})
-                } else if (value == 30){
-                    dataLayer.push({'event':'scroll','porcentagem': '30 %'})
-                } else if (value == 40){
-                    dataLayer.push({'event':'scroll','porcentagem': '40 %'})
-                } else if (value == 50){
-                    dataLayer.push({'event':'scroll','porcentagem': '50 %'})
-                } else if (value == 60){
-                    dataLayer.push({'event':'scroll','porcentagem': '60 %'})
-                } else if (value == 70){
-                    dataLayer.push({'event':'scroll','porcentagem': '70 %'})
-                } else if (value == 80){
-                    dataLayer.push({'event':'scroll','porcentagem': '80 %'})
-                } else if (value == 90){
-                    dataLayer.push({'event':'scroll','porcentagem': '90 %'})
-                } else if (value == 100){
-                    dataLayer.push({'event':'scroll','porcentagem': '100 %'})
-                } 
-
             })
 
         </script>
-        <a href="gato1.html"><img src="gato1.jpg" alt="Gato fofinho"></a>
-        <button>Adicionar ao carrinho</button>
+        <h3 class='gatinho1'>Gatinho 1</h3>
+        <img src="gato1.jpg" alt="Gato fofinho">
+        <button class='botaogatinho1'>Adicionar ao carrinho</button>
         <br>
         <a href=""><img src="gato2.jpg" alt="Gato fofinho"></a>
         <button>Adicionar ao carrinho</button>
@@ -92,4 +71,3 @@
         <iframe width="560" height="315" src="https://www.youtube.com/embed/LMD6MqwErzc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </body>
 </html>
-
